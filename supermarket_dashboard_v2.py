@@ -96,7 +96,7 @@ if all(f in df.columns for f in features) and 'Customer_Type' in df.columns:
     fig3, ax = plt.subplots(figsize=(12,6))
     plot_tree(model, feature_names=features, class_names=['Non-Repeating','Returning'], filled=True)
     st.pyplot(fig3)
-    joblib.dump(model, "app/makhdoom_decision_tree.pkl")
+    joblib.dump(model, "makhdoom_decision_tree.pkl")
 else:
     st.info("Not enough columns to train Decision Tree. Required: " + ", ".join(features) + ", Customer_Type")
 
