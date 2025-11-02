@@ -23,7 +23,7 @@ if uploaded_file:
         st.error(f"Error reading uploaded file: {e}")
         st.stop()
 else:
-    default_path = os.path.join("data", "supermarket_customers.csv")
+    default_path = os.path.join("supermarket_customers.csv")
     if os.path.exists(default_path):
         df = pd.read_csv(default_path)
     else:
